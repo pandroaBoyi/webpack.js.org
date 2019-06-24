@@ -81,6 +81,7 @@ __webpack.dev.js__
 + const common = require('./webpack.common.js');
 +
 + module.exports = merge(common, {
+    mode: 'development',
 +   devtool: 'inline-source-map',
 +   devServer: {
 +     contentBase: './dist'
@@ -96,9 +97,7 @@ __webpack.prod.js__
 + const common = require('./webpack.common.js');
 +
 + module.exports = merge(common, {
-+   plugins: [
-+     new UglifyJSPlugin()
-+   ]
++   mode: 'production'
 + });
 ```
 
